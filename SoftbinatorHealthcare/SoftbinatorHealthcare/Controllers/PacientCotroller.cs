@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SoftbinatorHealthcare.Authentication;
 using SoftbinatorHealthcare.DTO;
 using SoftbinatorHealthcare.Models;
 using SoftbinatorHealthcare.Repository;
@@ -34,6 +35,7 @@ namespace SoftbinatorHealthcare.Controllers
             return Ok(mapper.Map<IEnumerable<PacientDto>>(pacient));
         }
 
+        [Authorize]
         // GET: api/pacient/id
         [HttpGet("{id}", Name = "Getpacient")]
         public IActionResult Get(long id)
@@ -48,6 +50,7 @@ namespace SoftbinatorHealthcare.Controllers
             return Ok(mapper.Map<PacientDto>(pacient));
         }
 
+        [Authorize]
         //POST: api/pacient add
         [HttpPost]
         public IActionResult Post([FromBody] PacientDto pacientDto)
@@ -61,6 +64,8 @@ namespace SoftbinatorHealthcare.Controllers
             return CreatedAtRoute("Getpacient", new { Id = pacient.PacientID }, pacient);
         }
 
+        [Authorize(Roles = UserRoles.Admin)]
+        [Authorize]
         //PUT : api/pacient update
         [HttpPut("{id}")]
         public IActionResult Put(long id, [FromBody] PacientDto pacientDto)
@@ -79,6 +84,9 @@ namespace SoftbinatorHealthcare.Controllers
             pacientRepository.Update(pacientToUpdate, pacient);
             return NoContent();
         }
+
+        [Authorize(Roles = UserRoles.Admin)]
+        [Authorize]
         //DELETE: api/pacient/id
         [HttpDelete("{id}")]
         public IActionResult Delete(long id)
