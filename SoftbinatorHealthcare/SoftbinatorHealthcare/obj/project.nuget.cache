@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XSntCk4np59fzy+pGwOIV2uVWYqm/jm/KVUDeFZsZaKWePP9OfvBgzvIstG42nsbC4zTMwhVfw8IjisyOmqjCA==",
+  "dgSpecHash": "cw2SJC03ybi3pkbBvQ+Li2QzGvU35qJpIZgTu7y7ZG2Hu8p8uRlDcFl+sT+0KIWAjQV3SYIAZPQhjOc3O43sXA==",
   "success": true,
-  "projectFilePath": "C:\\Old Laptop Data\\Bogdan Cojocaru\\Softbinator\\SoftbinatorHealthcare\\SoftbinatorHealthcare\\SoftbinatorHealthcare.csproj",
+  "projectFilePath": "C:\\Users\\Bogdan\\Documents\\GitHub\\softbinator-healthcare-remote\\SoftbinatorHealthcare\\SoftbinatorHealthcare\\SoftbinatorHealthcare.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bogdan\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Bogdan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Old Laptop Data\\Bogdan Cojocaru\\Softbinator\\SoftbinatorHealthcare\\SoftbinatorHealthcare\\SoftbinatorHealthcare.csproj": {}
+    "C:\\Users\\Bogdan\\Documents\\GitHub\\softbinator-healthcare-remote\\SoftbinatorHealthcare\\SoftbinatorHealthcare\\SoftbinatorHealthcare.csproj": {}
   },
   "projects": {
-    "C:\\Old Laptop Data\\Bogdan Cojocaru\\Softbinator\\SoftbinatorHealthcare\\SoftbinatorHealthcare\\SoftbinatorHealthcare.csproj": {
+    "C:\\Users\\Bogdan\\Documents\\GitHub\\softbinator-healthcare-remote\\SoftbinatorHealthcare\\SoftbinatorHealthcare\\SoftbinatorHealthcare.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Old Laptop Data\\Bogdan Cojocaru\\Softbinator\\SoftbinatorHealthcare\\SoftbinatorHealthcare\\SoftbinatorHealthcare.csproj",
+        "projectUniqueName": "C:\\Users\\Bogdan\\Documents\\GitHub\\softbinator-healthcare-remote\\SoftbinatorHealthcare\\SoftbinatorHealthcare\\SoftbinatorHealthcare.csproj",
         "projectName": "SoftbinatorHealthcare",
-        "projectPath": "C:\\Old Laptop Data\\Bogdan Cojocaru\\Softbinator\\SoftbinatorHealthcare\\SoftbinatorHealthcare\\SoftbinatorHealthcare.csproj",
+        "projectPath": "C:\\Users\\Bogdan\\Documents\\GitHub\\softbinator-healthcare-remote\\SoftbinatorHealthcare\\SoftbinatorHealthcare\\SoftbinatorHealthcare.csproj",
         "packagesPath": "C:\\Users\\Bogdan\\.nuget\\packages\\",
-        "outputPath": "C:\\Old Laptop Data\\Bogdan Cojocaru\\Softbinator\\SoftbinatorHealthcare\\SoftbinatorHealthcare\\obj\\",
+        "outputPath": "C:\\Users\\Bogdan\\Documents\\GitHub\\softbinator-healthcare-remote\\SoftbinatorHealthcare\\SoftbinatorHealthcare\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Bogdan\\AppData\\Roaming\\NuGet\\NuGet.Config",
