@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SoftbinatorHealthcare.Authentication;
 using SoftbinatorHealthcare.DTO;
 using SoftbinatorHealthcare.Email;
 using SoftbinatorHealthcare.Models;
@@ -26,6 +27,7 @@ namespace SoftbinatorHealthcare.Controllers
 
         public int FromBody { get; private set; }
 
+        [Authorize(Roles = UserRoles.Admin)]
         [Authorize]
         [HttpGet]
         public IActionResult Get([FromBody] TreatmentDto treatmentDto)
