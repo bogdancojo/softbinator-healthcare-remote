@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SoftbinatorHealthcare.Authentication;
 using SoftbinatorHealthcare.DTO;
 using SoftbinatorHealthcare.Models;
 using SoftbinatorHealthcare.Repository;
@@ -24,6 +26,7 @@ namespace SoftbinatorHealthcare.Controllers
             mapper = _mapper;
         }
 
+        [Authorize]
         // GET: api/disease
         [HttpGet]
         public IActionResult Get()
@@ -32,6 +35,7 @@ namespace SoftbinatorHealthcare.Controllers
             return Ok(mapper.Map<IEnumerable<DiseaseDto>>(disease));
         }
 
+        [Authorize]
         //GET: api/disease/id
         [HttpGet("{id}", Name = "Getdisease")]
         public IActionResult Get(long id)
@@ -45,6 +49,7 @@ namespace SoftbinatorHealthcare.Controllers
             return Ok(mapper.Map<DiseaseDto>(disease));
         }
 
+        [Authorize]
         //POST: api/disease
         [HttpPost]
         public IActionResult Post([FromBody] DiseaseDto diseaseDto)
@@ -58,6 +63,8 @@ namespace SoftbinatorHealthcare.Controllers
             return CreatedAtRoute("Getdisease", new { Id = disease.DiseaseID }, disease);
         }
 
+        [Authorize(Roles = UserRoles.Admin)]
+        [Authorize]
         //PUT : api/disease
         [HttpPut("{id}")]
         public IActionResult Put(long id, [FromBody] DiseaseDto diseaseDto)
@@ -76,6 +83,8 @@ namespace SoftbinatorHealthcare.Controllers
             return NoContent();
         }
 
+        [Authorize(Roles = UserRoles.Admin)]
+        [Authorize]
         //DELETE: api/disease/id
         [HttpDelete("{id}")]
         public IActionResult Delete(long id)
