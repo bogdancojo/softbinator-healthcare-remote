@@ -1,0 +1,924 @@
+{
+	"info": {
+		"_postman_id": "8a38017a-c082-4a3d-86a0-83c98654d736",
+		"name": "SoftbinatorPostmanCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pacient Requests",
+			"item": [
+				{
+					"name": "Get all Pacients",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdEBnbWFpbC5jb20iLCJqdGkiOiJlYjZjZjU1My04YTg3LTRmZjMtYWI4OC1lMTJlZjg2MWY4ZGEiLCJleHAiOjE2MjE3MDA4MzYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDc2MzYiLCJhdWQiOiJVc2VyIn0.ZKMqCyYAoB5oRXeEpjFXZX2MC9_wD6d-KqdOXNrMiME",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:47636/api/pacient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"pacient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pacient by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdEBnbWFpbC5jb20iLCJqdGkiOiJlYjZjZjU1My04YTg3LTRmZjMtYWI4OC1lMTJlZjg2MWY4ZGEiLCJleHAiOjE2MjE3MDA4MzYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDc2MzYiLCJhdWQiOiJVc2VyIn0.ZKMqCyYAoB5oRXeEpjFXZX2MC9_wD6d-KqdOXNrMiME",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:47636/api/pacient/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"pacient",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Pacient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdEBnbWFpbC5jb20iLCJqdGkiOiJlYjZjZjU1My04YTg3LTRmZjMtYWI4OC1lMTJlZjg2MWY4ZGEiLCJleHAiOjE2MjE3MDA4MzYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDc2MzYiLCJhdWQiOiJVc2VyIn0.ZKMqCyYAoB5oRXeEpjFXZX2MC9_wD6d-KqdOXNrMiME",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Marian\",\r\n    \"lastName\": \"Theodorescu\",\r\n    \"dateOfBirth\": \"1989-02-11T00:00:00\",\r\n    \"insurance\": true,\r\n    \"underlyingConditions\": \"none\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:47636/api/pacient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"pacient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Pacient by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW5Vc2VyQGdtYWlsLmNvbSIsImp0aSI6IjQ4YmM1OTVmLTc3ZTItNDI0Ni05YjgyLWUzMjMwNTVjNWM1MyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjIxNzAxMTk2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ3NjM2IiwiYXVkIjoiVXNlciJ9.lmbWywlmFsEWpRJZT4YZ6chchoPvlurvP9sdpYh1o4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Marian-Iosif\",\r\n    \"lastName\": \"Theodorescu\",\r\n    \"dateOfBirth\": \"1989-02-11T00:00:00\",\r\n    \"insurance\": true,\r\n    \"underlyingConditions\": \"none\"\r\n }   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:47636/api/pacient/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"pacient",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Pacient by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW5Vc2VyQGdtYWlsLmNvbSIsImp0aSI6IjQ4YmM1OTVmLTc3ZTItNDI0Ni05YjgyLWUzMjMwNTVjNWM1MyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjIxNzAxMTk2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ3NjM2IiwiYXVkIjoiVXNlciJ9.lmbWywlmFsEWpRJZT4YZ6chchoPvlurvP9sdpYh1o4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:47636/api/pacient/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"pacient",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Disease Requests",
+			"item": [
+				{
+					"name": "Get all Diseases",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW5Vc2VyQGdtYWlsLmNvbSIsImp0aSI6IjQ4YmM1OTVmLTc3ZTItNDI0Ni05YjgyLWUzMjMwNTVjNWM1MyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjIxNzAxMTk2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ3NjM2IiwiYXVkIjoiVXNlciJ9.lmbWywlmFsEWpRJZT4YZ6chchoPvlurvP9sdpYh1o4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:47636/api/disease",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"disease"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Disease by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW5Vc2VyQGdtYWlsLmNvbSIsImp0aSI6IjQ4YmM1OTVmLTc3ZTItNDI0Ni05YjgyLWUzMjMwNTVjNWM1MyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjIxNzAxMTk2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ3NjM2IiwiYXVkIjoiVXNlciJ9.lmbWywlmFsEWpRJZT4YZ6chchoPvlurvP9sdpYh1o4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:47636/api/disease/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"disease",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Disease",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW5Vc2VyQGdtYWlsLmNvbSIsImp0aSI6IjQ4YmM1OTVmLTc3ZTItNDI0Ni05YjgyLWUzMjMwNTVjNWM1MyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjIxNzAxMTk2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ3NjM2IiwiYXVkIjoiVXNlciJ9.lmbWywlmFsEWpRJZT4YZ6chchoPvlurvP9sdpYh1o4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"diseaseName\": \"TuberculosisPostTest\",\r\n        \"symptom1\": \"cough\",\r\n        \"symptom2\": \"fever\",\r\n        \"symptom3\": \"chills\",\r\n        \"symptom4\": \"night sweats\",\r\n        \"symptom5\": \"loss of apetite\",\r\n        \"diseaseType\": \"Respiratory\",\r\n        \"riskFactor\": \"High\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:47636/api/disease",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"disease"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Disease by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW5Vc2VyQGdtYWlsLmNvbSIsImp0aSI6IjQ4YmM1OTVmLTc3ZTItNDI0Ni05YjgyLWUzMjMwNTVjNWM1MyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjIxNzAxMTk2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ3NjM2IiwiYXVkIjoiVXNlciJ9.lmbWywlmFsEWpRJZT4YZ6chchoPvlurvP9sdpYh1o4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"diseaseName\": \"TuberculosisUpdate\",\r\n    \"symptom1\": \"cough\",\r\n    \"symptom2\": \"fever\",\r\n    \"symptom3\": \"chills\",\r\n    \"symptom4\": \"night sweats\",\r\n    \"symptom5\": \"loss of apetite\",\r\n    \"diseaseType\": \"Respiratory\",\r\n    \"riskFactor\": \"High\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:47636/api/disease/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"disease",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Disease by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW5Vc2VyQGdtYWlsLmNvbSIsImp0aSI6IjQ4YmM1OTVmLTc3ZTItNDI0Ni05YjgyLWUzMjMwNTVjNWM1MyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjIxNzAxMTk2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ3NjM2IiwiYXVkIjoiVXNlciJ9.lmbWywlmFsEWpRJZT4YZ6chchoPvlurvP9sdpYh1o4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:47636/api/disease/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"disease",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Treatment Requests",
+			"item": [
+				{
+					"name": "Get all Treatments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW5Vc2VyQGdtYWlsLmNvbSIsImp0aSI6IjQ4YmM1OTVmLTc3ZTItNDI0Ni05YjgyLWUzMjMwNTVjNWM1MyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjIxNzAxMTk2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ3NjM2IiwiYXVkIjoiVXNlciJ9.lmbWywlmFsEWpRJZT4YZ6chchoPvlurvP9sdpYh1o4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:47636/api/treatment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"treatment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Treatment by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW5Vc2VyQGdtYWlsLmNvbSIsImp0aSI6IjQ4YmM1OTVmLTc3ZTItNDI0Ni05YjgyLWUzMjMwNTVjNWM1MyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjIxNzAxMTk2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ3NjM2IiwiYXVkIjoiVXNlciJ9.lmbWywlmFsEWpRJZT4YZ6chchoPvlurvP9sdpYh1o4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:47636/api/treatment/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"treatment",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Treatment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW5Vc2VyQGdtYWlsLmNvbSIsImp0aSI6IjQ4YmM1OTVmLTc3ZTItNDI0Ni05YjgyLWUzMjMwNTVjNWM1MyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjIxNzAxMTk2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ3NjM2IiwiYXVkIjoiVXNlciJ9.lmbWywlmFsEWpRJZT4YZ6chchoPvlurvP9sdpYh1o4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"treatmentID\": 6,\r\n    \"diseaseName\": \"ConjunctivitisPostTest\",\r\n    \"medication\": \"Bleph (sulfacetamide sodium), Moxeza (moxifloxacin), Zymar (gatifloxacin), Romycin (erythromycin)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:47636/api/treatment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"treatment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Treatment by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW5Vc2VyQGdtYWlsLmNvbSIsImp0aSI6IjQ4YmM1OTVmLTc3ZTItNDI0Ni05YjgyLWUzMjMwNTVjNWM1MyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjIxNzAxMTk2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ3NjM2IiwiYXVkIjoiVXNlciJ9.lmbWywlmFsEWpRJZT4YZ6chchoPvlurvP9sdpYh1o4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"treatmentID\": 4,\r\n    \"diseaseName\": \"ConjunctivitisTestPut\",\r\n    \"medication\": \"Bleph (sulfacetamide sodium), Moxeza (moxifloxacin), Zymar (gatifloxacin), Romycin (erythromycin)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:47636/api/treatment/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"treatment",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Treatment by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW5Vc2VyQGdtYWlsLmNvbSIsImp0aSI6IjQ4YmM1OTVmLTc3ZTItNDI0Ni05YjgyLWUzMjMwNTVjNWM1MyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjIxNzAxMTk2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ3NjM2IiwiYXVkIjoiVXNlciJ9.lmbWywlmFsEWpRJZT4YZ6chchoPvlurvP9sdpYh1o4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:47636/api/treatment/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"treatment",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Doctor Requests",
+			"item": [
+				{
+					"name": "Get all Doctors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW5Vc2VyQGdtYWlsLmNvbSIsImp0aSI6IjQ4YmM1OTVmLTc3ZTItNDI0Ni05YjgyLWUzMjMwNTVjNWM1MyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjIxNzAxMTk2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ3NjM2IiwiYXVkIjoiVXNlciJ9.lmbWywlmFsEWpRJZT4YZ6chchoPvlurvP9sdpYh1o4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:47636/api/doctor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"doctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Doctor by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW5Vc2VyQGdtYWlsLmNvbSIsImp0aSI6IjQ4YmM1OTVmLTc3ZTItNDI0Ni05YjgyLWUzMjMwNTVjNWM1MyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjIxNzAxMTk2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ3NjM2IiwiYXVkIjoiVXNlciJ9.lmbWywlmFsEWpRJZT4YZ6chchoPvlurvP9sdpYh1o4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:47636/api/doctor/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"doctor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get BestDoctor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW5Vc2VyQGdtYWlsLmNvbSIsImp0aSI6IjQ4YmM1OTVmLTc3ZTItNDI0Ni05YjgyLWUzMjMwNTVjNWM1MyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjIxNzAxMTk2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ3NjM2IiwiYXVkIjoiVXNlciJ9.lmbWywlmFsEWpRJZT4YZ6chchoPvlurvP9sdpYh1o4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:47636/api/doctor/bestdoctor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"doctor",
+								"bestdoctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Doctor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW5Vc2VyQGdtYWlsLmNvbSIsImp0aSI6IjQ4YmM1OTVmLTc3ZTItNDI0Ni05YjgyLWUzMjMwNTVjNWM1MyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjIxNzAxMTk2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ3NjM2IiwiYXVkIjoiVXNlciJ9.lmbWywlmFsEWpRJZT4YZ6chchoPvlurvP9sdpYh1o4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Maria-Teodora\",\r\n        \"lastName\": \"Fasie\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:47636/api/doctor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"doctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Doctor by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW5Vc2VyQGdtYWlsLmNvbSIsImp0aSI6IjQ4YmM1OTVmLTc3ZTItNDI0Ni05YjgyLWUzMjMwNTVjNWM1MyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjIxNzAxMTk2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ3NjM2IiwiYXVkIjoiVXNlciJ9.lmbWywlmFsEWpRJZT4YZ6chchoPvlurvP9sdpYh1o4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"UpdateDoctorTest\",\r\n    \"lastName\": \"UpdateDocTest\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:47636/api/doctor/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"doctor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Doctor by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW5Vc2VyQGdtYWlsLmNvbSIsImp0aSI6IjQ4YmM1OTVmLTc3ZTItNDI0Ni05YjgyLWUzMjMwNTVjNWM1MyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjIxNzAxMTk2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ3NjM2IiwiYXVkIjoiVXNlciJ9.lmbWywlmFsEWpRJZT4YZ6chchoPvlurvP9sdpYh1o4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:47636/api/doctor/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"doctor",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SendEmail Requests",
+			"item": [
+				{
+					"name": "Post SendEmail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW5Vc2VyQGdtYWlsLmNvbSIsImp0aSI6IjQ4YmM1OTVmLTc3ZTItNDI0Ni05YjgyLWUzMjMwNTVjNWM1MyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjIxNzAxMTk2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ3NjM2IiwiYXVkIjoiVXNlciJ9.lmbWywlmFsEWpRJZT4YZ6chchoPvlurvP9sdpYh1o4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"treatmentID\": 1,\r\n        \"diseaseName\": \"Tuberculosis\",\r\n        \"medication\": \"Isoniazid, Rifampin, Ethambutol, Pyrazinamide\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:47636/api/sendemail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"sendemail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RegisterUser Request",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Username\": \"TestUser@gmail.com\",\r\n    \"Email\": \"TestUser@gmail.com\",\r\n    \"Password\": \"Softbinatorpassword@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:47636/api/authenticate/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"authenticate",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RegisterAdmin Request",
+			"item": [
+				{
+					"name": "Register Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"Username\": \"TestAdminUser@gmail.com\",\r\n    \"Email\": \"TestAdminUser@gmail.com\",\r\n    \"Password\": \"Softbinatorpassword@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:47636/api/authenticate/register/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"authenticate",
+								"register",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login Request",
+			"item": [
+				{
+					"name": "Admin login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Username\": \"AdminUser@gmail.com\",\r\n    \"Password\": \"Softbinatorpassword@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:47636/api/authenticate/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"authenticate",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Username\": \"test@gmail.com\",\r\n    \"Password\": \"Softbinatorpassword@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:47636/api/authenticate/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "47636",
+							"path": [
+								"api",
+								"authenticate",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
