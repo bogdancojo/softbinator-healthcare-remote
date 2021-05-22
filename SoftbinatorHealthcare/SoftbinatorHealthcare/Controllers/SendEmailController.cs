@@ -29,7 +29,7 @@ namespace SoftbinatorHealthcare.Controllers
 
         [Authorize(Roles = UserRoles.Admin)]
         [Authorize]
-        [HttpGet]
+        [HttpPost]
         public IActionResult Get([FromBody] TreatmentDto treatmentDto)
         {
             var treatment = mapper.Map<Treatment>(treatmentDto);
