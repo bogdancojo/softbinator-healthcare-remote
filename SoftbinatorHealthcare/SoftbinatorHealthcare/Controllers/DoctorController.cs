@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SoftbinatorHealthcare.Authentication;
 using SoftbinatorHealthcare.DTO;
 using SoftbinatorHealthcare.Entities;
 using SoftbinatorHealthcare.Models.DataManager;
@@ -25,6 +27,7 @@ namespace SoftbinatorHealthcare.Controllers
             mapper = _mapper;
         }
 
+        [Authorize]
         // GET: api/doctor
         [HttpGet]
         public IActionResult Get()
@@ -33,6 +36,7 @@ namespace SoftbinatorHealthcare.Controllers
             return Ok(mapper.Map<IEnumerable<DoctorDto>>(doctor));
         }
 
+        [Authorize]
         [HttpGet]
         [Route("bestdoctor")]
         public IActionResult GetBest()
@@ -41,6 +45,7 @@ namespace SoftbinatorHealthcare.Controllers
             return Ok(bestDoctor);
         }
 
+        [Authorize]
         // GET: api/doctor/id
         [HttpGet("{id}", Name = "Getdoctor")]
         public IActionResult Get(long id)
@@ -55,6 +60,8 @@ namespace SoftbinatorHealthcare.Controllers
             return Ok(mapper.Map<DoctorDto>(doctor));
         }
 
+        [Authorize(Roles = UserRoles.Admin)]
+        [Authorize]
         //POST: api/doctor
         [HttpPost]
         public IActionResult Post([FromBody] DoctorDto doctorDto)
@@ -68,6 +75,8 @@ namespace SoftbinatorHealthcare.Controllers
             return CreatedAtRoute("Getdoctor", new { Id = doctor.DoctorID }, doctor);
         }
 
+        [Authorize(Roles = UserRoles.Admin)]
+        [Authorize]
         //PUT : api/pacient
         [HttpPut("{id}")]
         public IActionResult Put(long id, [FromBody] DoctorDto doctorDto)
@@ -86,6 +95,9 @@ namespace SoftbinatorHealthcare.Controllers
             doctorRepository.Update(doctorToUpdate, doctor);
             return NoContent();
         }
+
+        [Authorize(Roles = UserRoles.Admin)]
+        [Authorize]
         //DELETE: api/pacient/id
         [HttpDelete("{id}")]
         public IActionResult Delete(long id)
